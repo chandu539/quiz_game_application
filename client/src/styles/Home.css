@@ -1,0 +1,43 @@
+/* Home.css */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styled Button */
+button {
+    background: #ffffff;
+    color: #6a11cb;
+    font-size: 1.2rem;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+   
+    font-weight: 500;
+    outline: none;
+    width: 250px; /* Ensures good width for all screen sizes */
+    text-align: center;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: #4b0082;
+    color: #ffffff;
+   
+}
