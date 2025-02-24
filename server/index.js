@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-    origin: "https://quiz-game-application-chi.vercel.app",
+    origin: "https://quiz-game-application-frontend.vercel.app",
     credentials: true
 }));
 app.use(bodyParser.json());
