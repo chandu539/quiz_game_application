@@ -26,11 +26,11 @@ function QuizPage() {
     useEffect(() => {
         const fetchQuestions = async () => {
             try {
-                const response = await axios.get('https://quiz-game-application-backend.vercel.app/api/questions');
+                const response = await axios.get('http://localhost:5000/api/questions');
                 if (response.data.length === 0) {
-                    await axios.post('https://quiz-game-application-backend.vercel.app/api/questions/store', { questions: predefinedQuestions });
+                    await axios.post('http://localhost:5000/api/questions/store', { questions: predefinedQuestions });
                     toast.success("Questions stored successfully!");
-                    const updatedResponse = await axios.get('https://quiz-game-application-backend.vercel.app/api/questions');
+                    const updatedResponse = await axios.get('http://localhost:5000/api/questions');
                     setQuestions(updatedResponse.data);
                 } else {
                     setQuestions(response.data);
@@ -73,7 +73,7 @@ function QuizPage() {
                             {option}
                         </button>
                         ))}
-                    </div>
+                        </div>
                     <div className="navigation-buttons">
                         {currentQuestion > 0 && (
                             <button onClick={() => setCurrentQuestion(currentQuestion - 1)}>Previous</button>
