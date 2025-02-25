@@ -8,7 +8,14 @@ const questionRoutes = require('./routes/questionRoutes');
 dotenv.config();
 
 const app = express();
-app.use(cors({}));
+
+// Configure CORS to allow requests from your frontend
+app.use(cors({
+    origin: 'https://quiz-game-application-frontend.vercel.app', 
+    methods: 'GET,POST,PUT,DELETE',
+    credentials: true
+}));
+
 app.use(bodyParser.json());
 
 // MongoDB connection
